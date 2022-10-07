@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- here we will give mySQL driver name for jdbc connection -->
+
+
+		<property name="connection.url">jdbc:mysql://localhost:3306/db1</property>
+		
+		<!-- we give url jdbc port number here and give the database name whatever name we want -->
+		
+		<property name="connection.username">root</property>
+		<!-- here we will give database userName -->
+		
+		<property name="connection.password">root</property>
+		<!-- here we will give database password. -->
+		
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		<!-- dialect means whichone database has been used and hibernate needs dialect to automatically
+		create query. -->
+		
+		<property name="hbm2ddl.auto">create</property>
+		<!-- it create table in database and we write update then it will automatically update existing
+		query. -->
+		<property name="show_sql">true</property>
+		<!-- it will show sql query on console. -->
+		<mapping class="com.te.hibernate.d.Student" />
+		<mapping class="com.te.hibernate.d.Laptop"></mapping>
+
+	</session-factory>
+</hibernate-configuration>
